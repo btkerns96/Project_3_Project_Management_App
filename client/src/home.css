@@ -1,0 +1,16 @@
+/* Home.css */
+
+main {
+    background-image: url("./images/todolist.jpg");
+    background-size: cover;
+    background-position: center;
+
+    
+  }
+
+  body {
+    background-image: url('./images/todolist.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+  
