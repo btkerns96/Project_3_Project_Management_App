@@ -62,8 +62,7 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>List of Projects?</h3>
-
+      <h3>List of Your Projects</h3>
       {Auth.loggedIn() ? (
         <>
           <p
@@ -77,10 +76,21 @@ const ThoughtForm = () => {
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
+              <div className="col-12 col-lg-9">
+              <textarea
+                name="thoughtText"
+                placeholder="Project Title"
+               // value={thoughtTitle}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+
             <div className="col-12 col-lg-9">
               <textarea
                 name="thoughtText"
-                placeholder="Here's a new thought..."
+                placeholder="Tell us about your project..."
                 value={thoughtText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -90,7 +100,7 @@ const ThoughtForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
+                Add Project
               </button>
             </div>
             {error && (
