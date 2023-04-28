@@ -21,11 +21,11 @@ const ThoughtList = ({
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${thought.thoughtAuthor}`}
+                  to={`/thoughts/${thought._id}`} // Update the 'to' attribute here
                 >
-                  {thought.thoughtAuthor} <br />
+                  {thought.thoughtTitle} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this comment on {thought.createdAt}
+                    This project was posted on {thought.createdAt}
                   </span>
                 </Link>
               ) : (

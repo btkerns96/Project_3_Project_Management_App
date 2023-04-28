@@ -9,6 +9,13 @@ const thoughtSchema = new Schema({
     maxlength: 280,
     trim: true,
   },
+  thoughtTitle: {
+    type: String,
+    required: 'You need to leave a title AND description!',
+    minlength: 1,
+    maxlength: 100,
+    trim: true,
+  },
   thoughtAuthor: {
     type: String,
     required: true,
