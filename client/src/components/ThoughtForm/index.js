@@ -136,8 +136,11 @@ import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 const ThoughtForm = () => {
+  const [thoughtTitle, setThoughtTitle] = useState('');
   const [thoughtText, setThoughtText] = useState('');
+
   const [image, setImage] = useState(null); // Add state for image
+
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -155,16 +158,24 @@ const ThoughtForm = () => {
       }
 
       // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME });
-      cache.writeQuery({
-        query: QUERY_ME,
-        data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
-      });
+      const userData = cache.readQuery({ query: QUERY_ME });
+      if (userData) {
+        const { me } = userData;
+        cache.writeQuery({
+          query: QUERY_ME,
+          data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
+        });
+      }
     },
   });
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+
+    if (!thoughtTitle) {
+      console.error('Please provide a thought title before submitting.');
+      return;
+    }
 
     try {
       const formData = new FormData(); // Create a new FormData object
@@ -176,6 +187,10 @@ const ThoughtForm = () => {
 
       const { data } = await addThought({
         variables: {
+
+          thoughtText,
+          thoughtTitle,
+
           thoughtAuthor: Auth.getProfile().data.username,
         },
         // Pass the form data as the "input" variable to the mutation
@@ -183,7 +198,11 @@ const ThoughtForm = () => {
       });
 
       setThoughtText('');
+
+      setThoughtTitle('');
+
       setImage(null);
+
     } catch (err) {
       console.error(err);
     }
@@ -196,6 +215,10 @@ const ThoughtForm = () => {
       setThoughtText(value);
       setCharacterCount(value.length);
     }
+
+    if (name === 'thoughtTitle') {
+      setThoughtTitle(value);
+    }
   };
 
   const handleImageChange = (event) => {
@@ -205,7 +228,7 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>List of Your Projects</h3>
+      <h3>Post a Project!</h3>
       {Auth.loggedIn() ? (
         <>
           <p
@@ -221,6 +244,12 @@ const ThoughtForm = () => {
           >
             <div className="col-12 col-lg-9">
               <input
+                type="text"
+                name="thoughtTitle"
+                placeholder="Tell us the name of your project..."
+                value={thoughtTitle}
+                className="form-input w-100"
+                onChange={handleChange}
                 type="file"
                 accept="image/*"
                 onChange={handleImageChange}
@@ -235,6 +264,14 @@ const ThoughtForm = () => {
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
+            </div>
+
+            <div className="col-12 col-lg-9">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleChange}
+              />
             </div>
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
