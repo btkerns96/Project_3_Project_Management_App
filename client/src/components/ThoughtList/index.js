@@ -25,7 +25,7 @@ const ThoughtList = ({
                 >
                   {thought.thoughtAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    posted this project on {thought.createdAt}
+                    had this comment on {thought.createdAt}
                   </span>
                 </Link>
               ) : (

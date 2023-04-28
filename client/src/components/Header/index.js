@@ -15,7 +15,7 @@ const Header = () => {
           <Link className="text-light" to="/">
             <h1 className="m-0">Projects</h1>
           </Link>
-          <p className="m-0">Take a look at the newest Projects.</p>
+          <p className="m-0">Take a look at my newest Projects.</p>
         </div>
         <div>
           {Auth.loggedIn() ? (
