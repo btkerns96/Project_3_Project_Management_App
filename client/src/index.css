@@ -366,7 +366,7 @@ body {
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 16px;
-  color: #1a1a1a;
+  color: #0c0125;
   text-align: center;
 }
 
@@ -430,12 +430,12 @@ button {
 }
 
 a {
-  color: #1b89bc;
+  color: #052dce;
   text-decoration: none;
 }
 
 a:hover {
-  color: #065b83;
+  color: #4d21ee;
   text-decoration: underline;
 }
 
@@ -927,19 +927,19 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #000000 !important;
+  background-color: #033e6e !important;
 }
 
 .bg-info {
-  background-color: #1bbc9b !important;
+  background-color: #f5f9f9 !important;
 }
 
 .bg-danger {
-  background-color: #e64c66 !important;
+  background-color: #560c18 !important;
 }
 
 .bg-light {
-  background-color: #ffffff !important;
+  background-color: #ebf1f3 !important;
 }
 
 .bg-dark {
@@ -955,7 +955,7 @@ a:hover {
 }
 
 .bg-link {
-  background-color: #1b89bc !important;
+  background-color: #107f0e !important;
 }
 
 /* DISPLAY */
@@ -1017,10 +1017,10 @@ a:hover {
   display: block;
   text-align: center;
 }
-
+/* Join the discussion */
 .btn.btn-primary {
-  background-color: #000000;
-  color: #d9e9e8;
+  background-color: #2d3e50;   
+  color: #ffffff;
 }
 
 .btn.btn-primary:hover {
