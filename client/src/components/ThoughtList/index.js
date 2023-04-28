@@ -21,7 +21,7 @@ const ThoughtList = ({
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/thoughts/${thought._id}`} // Update the 'to' attribute here
+                  to={`/thoughts/${thought._id}`}
                 >
                   {thought.thoughtTitle} <br />
                   <span style={{ fontSize: '1rem' }}>
