@@ -55,10 +55,10 @@ const ThoughtForm = () => {
 
     try {
       const formData = new FormData(); // Create a new FormData object
-      formData.append('thoughtText', thoughtText); // Add the text input to the form data
+      formData.append('thoughtText', thoughtText);
 
       if (image) {
-        formData.append('image', image); // Add the image to the form data
+        formData.append('image', image);
       }
 
       const { data } = await addThought({
