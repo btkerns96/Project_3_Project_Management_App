@@ -49,13 +49,13 @@ const ThoughtForm = () => {
       const { data } = await addThought({
         variables: {
           thoughtText,
-          thoughtTitle, // Include thoughtTitle in the mutation
+          thoughtTitle,
           thoughtAuthor: Auth.getProfile().data.username,
         },
       });
 
       setThoughtText('');
-      setThoughtTitle(''); // Reset thoughtTitle after submission
+      setThoughtTitle('');
     } catch (err) {
       console.error(err);
     }
