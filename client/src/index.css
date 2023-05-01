@@ -366,9 +366,11 @@ body {
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 16px;
-  color: #0c0125;
+  color: #ffffff;
   text-align: center;
+
 }
+
 
 h1,
 h2,
@@ -906,11 +908,11 @@ a:hover {
 }
 
 .text-light {
-  color: #d9e9e8 !important;
+  color: #ffffff !important;
 }
 
 .text-dark {
-  color: #1a1a1a !important;
+  color: #050505 !important;
 }
 
 .text-white {
@@ -928,6 +930,11 @@ a:hover {
 /* BACKGROUND UTILS */
 .bg-primary {
   background-color: #033e6e !important;
+  background-image: url('./images/notes.jpg');
+  background-repeat: none;
+  background-size: cover;
+  background-size: 90%;
+  background-blend-mode: luminosity;
 }
 
 .bg-info {
@@ -935,15 +942,15 @@ a:hover {
 }
 
 .bg-danger {
-  background-color: #560c18 !important;
+  background-color: #43000b !important;
 }
 
 .bg-light {
-  background-color: #ebf1f3 !important;
+  background-color: #044363 !important;
 }
-
+/* Commet box */
 .bg-dark {
-  background-color: #000000 !important;
+  background-color: #044363  !important;
 }
 
 .bg-white {
@@ -951,11 +958,11 @@ a:hover {
 }
 
 .bg-black {
-  background-color: #000000 !important;
+  background-color: #990202 !important;
 }
 
 .bg-link {
-  background-color: #107f0e !important;
+  background-color: #f5fff5 !important;
 }
 
 /* DISPLAY */
@@ -1035,23 +1042,34 @@ a:hover {
 .btn.btn-danger:hover {
   background-color: #ee8294;
 }
-
+/* Login-Button */
 .btn.btn-info {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #fffcfc;
+  
 }
 
 .btn.btn-info:hover {
-  background-color: #31e1bd;
+  background-color: #0d81d4;
+  width: 200px;
+  border: 3px solid #ffffff;
+  background: transparent;
+  color: #0b0b0b;
 }
 
+
+
 .btn.btn-light {
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background-color: #040404;
+  color: #ffffff;
 }
 
 .btn.btn-light:hover {
-  background-color: #84b8b4;
+  background-color: #0d81d4;
+  width: 200px;
+  border: 3px solid #ffffff;
+  background: transparent;
+  color: #0b0b0b;
 }
 
 .btn.btn-dark {
@@ -1713,3 +1731,15 @@ label form [type='radio'] {
     align-content: center;
   }
 }
+
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
