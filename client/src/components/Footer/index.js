@@ -16,14 +16,14 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
+          Made {' '}
           <span
             className="emoji"
             role="img"
             aria-label="heart"
             aria-hidden="false"
           >
-            ❤️
+            
           </span>{' '}
           by Nikhil, Brandon, Kevin, Davey and Carlos
         </h4>
