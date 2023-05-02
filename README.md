@@ -35,7 +35,7 @@ N/A
 
 # Brandon Kerns
 * GitHub Profile: https://github.com/btkerns96
-* Email: 
+* Email: btkerns96@gmail.com
 
 # Carlos Vargas
 * GitHub Profile: https://github.com/carliys
