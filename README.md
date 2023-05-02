@@ -43,11 +43,11 @@ N/A
 
 # Nikhil Prince
 * GitHub Profile: https://github.com/NikhilPrince
-* Email: 
+* Email: Nikhilprince1995@gmail.com
 
 # Davey Melero
 * GitHub Profile: https://github.com/DaveyMelero
-* Email: daveymelero213@gmail.com
+* Email: Davey1234576@gamil.com
 
 # Kevin Barraza
 * GitHub Profile: 
