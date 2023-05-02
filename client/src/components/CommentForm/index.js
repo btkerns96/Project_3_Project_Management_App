@@ -50,7 +50,7 @@ const CommentForm = ({ thoughtId }) => {
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
-            Character Count: {characterCount}/280
+            {/* Character Count: {characterCount}/280 */}
             {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
