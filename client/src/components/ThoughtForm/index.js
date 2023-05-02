@@ -98,7 +98,7 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>Welcome To Your Project Planner!</h3>
+      <h3>Welcome To your Lost Projects</h3>
       <p>Welcome to the project planner app, an all-in-one solution for managing your projects from start to finish. Whether you're a freelancer, a small business owner, or a project manager in a large organization, this app will help you stay organized and on track.</p>
         <p>
         Features: Track progress: Keep track of the progress of your projects with the app's easy-to-use dashboard. Set reminders for yourself or your team members so that no task or deadline is missed. Add team members to your projects and assign tasks to them. 
