@@ -6,6 +6,9 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://btkerns96:ImBatman101@project3.7xmtwq9.mongodb.net/?retryWrites=true&w=majority";
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({

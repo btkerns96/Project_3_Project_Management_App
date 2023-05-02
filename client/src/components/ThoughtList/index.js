@@ -9,7 +9,7 @@ const ThoughtList = ({
   onDeleteThought,
 }) => {
   if (!thoughts.length) {
-    return <h3>No Projects Yet</h3>;
+    return <h3>No Projects</h3>;
   }
 
   const renderDescription = (description) => {
@@ -62,7 +62,7 @@ const ThoughtList = ({
               className="btn btn-primary btn-block btn-squared"
               to={`/thoughts/${thought._id}`}
             >
-              Join the discussion.
+              Review and Comment
             </Link>
           </div>
         ))}

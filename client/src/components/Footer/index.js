@@ -23,7 +23,7 @@ const Footer = () => {
             aria-label="heart"
             aria-hidden="false"
           >
-            
+          
           </span>{' '}
           by Nikhil, Brandon, Kevin, Davey and Carlos
         </h4>
